@@ -8,11 +8,16 @@ import  {v4 as myUuid} from 'uuid'
  import Products from './Products';
  import Error from './Error'
 import SharedLayout from './SharedLayout';
+import SingleProduct from './SingleProduct';
+import LogIn from './LogIn';
+import DashBoard from './DashBoard';
+import ProtectedRoute from './ProtectedRoute';
  
 
  
  const App = ( ) => {
 
+  const [user, setUser] = useState(null);
   
  
   return (
@@ -24,6 +29,9 @@ import SharedLayout from './SharedLayout';
               <Route path='/services' element= {<Services/>}/>
               <Route path='/about' element= {<About/>}/>
               <Route path='/products' element= {<Products/>}/>
+              <Route path='/products/:productId' element = {<SingleProduct/>}/>
+              <Route path='/login' element= {<LogIn setUser = {setUser}/>}/>
+              <Route path='/dashboard' element = {<ProtectedRoute user = {user}><DashBoard user={user}/></ProtectedRoute>}/>
               <Route path='/*' element= {<Error/>}/>
             </Route>
             
