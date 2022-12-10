@@ -1,12 +1,12 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
+import NavBar from './NavBar'
 
 const Home = () => {
   return (
-    <div>
-      <h1>Home</h1>
-      <Link to='about'>About</Link>
-    </div>
+    < >
+       <h1>Home Page</h1>
+    </>
   )
 }
 
