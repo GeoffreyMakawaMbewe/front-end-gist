@@ -1,6 +1,4 @@
 import './App.css';
-import {useState, useEffect} from 'react'
-import  {v4 as myUuid} from 'uuid'
  import { BrowserRouter, Routes, Route } from 'react-router-dom';
  import Home from './Home';
  import Services from './Services';
